@@ -1,21 +1,5 @@
 // Vercel Serverless Function handler
-type VercelRequest = {
-  method?: string;
-  query: Record<string, string | string[] | undefined>;
-  body?: any;
-};
-
-type VercelResponse = {
-  status: (code: number) => VercelResponse;
-  json: (data: any) => void;
-  end: () => void;
-  setHeader: (name: string, value: string) => void;
-};
-
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse
-) {
+export default async function handler(req: any, res: any) {
   // CORS 헤더 설정
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');

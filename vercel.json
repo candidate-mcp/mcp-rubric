@@ -5,16 +5,10 @@
     {
       "source": "/api-proxy/:path*",
       "destination": "/api/api-proxy/:path*"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
